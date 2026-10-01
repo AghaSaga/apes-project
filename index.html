@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Red Wolf: A Specimen in Peril</title>
+  <meta name="description" content="An interactive field mission about the critically endangered red wolf." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Franklin:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-progress"><div id="pageProgress"></div></div>
+
+  <header class="hero" id="top">
+    <div class="hero-overlay"></div>
+    <nav class="nav">
+      <div class="brand">RED WOLF FIELD FILE</div>
+      <div class="nav-links">
+        <a href="#mission">Mission</a>
+        <a href="#stations">Stations</a>
+        <a href="#final">Final Test</a>
+      </div>
+    </nav>
+
+    <div class="hero-content reveal">
+      <div class="eyebrow">FIELD MISSION</div>
+      <h1>RED WOLF:<br><span>A SPECIMEN IN PERIL</span></h1>
+      <p class="hero-meta">Eastern North Carolina · <em>Canis rufus</em></p>
+      <p class="hero-copy">One wild population remains. Your job is to learn what is pushing it toward extinction and make choices that give the pack a better chance.</p>
+      <a class="primary-btn" href="#mission">BEGIN THE MISSION</a>
+    </div>
+    <div class="scroll-cue">SCROLL TO ENTER</div>
+  </header>
+
+  <main>
+    <section class="section dark" id="mission">
+      <div class="wrap reveal">
+        <div class="eyebrow">MISSION BRIEFING</div>
+        <h2>Meet one of the rarest wild canids on Earth.</h2>
+        <p class="lead">The red wolf is listed as Critically Endangered by the IUCN and Endangered under the United States Endangered Species Act.</p>
+
+        <div class="fact-grid">
+          <article class="fact-card">
+            <span>COMMON NAME</span>
+            <strong>Red Wolf</strong>
+          </article>
+          <article class="fact-card">
+            <span>SCIENTIFIC NAME</span>
+            <strong><em>Canis rufus</em></strong>
+          </article>
+          <article class="fact-card">
+            <span>WILD RANGE TODAY</span>
+            <strong>Eastern North Carolina</strong>
+          </article>
+        </div>
+
+        <div class="population-box">
+          <span>AUGUST 2026 ESTIMATE</span>
+          <p>About 22 to 23 adult and subadult red wolves were estimated in the wild, along with about 14 to 15 pups. About 295 red wolves were part of the SAFE conservation population.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section paper" id="stations">
+      <div class="wrap reveal">
+        <div class="eyebrow dark-text">HOW TO PLAY</div>
+        <h2 class="dark-text">Move through five stations.</h2>
+        <p class="lead dark-text">Each station ends with a multiple choice checkpoint. Pick one answer. You will immediately see whether you were right, and the site keeps your score for you.</p>
+
+        <div class="station-strip">
+          <div><b>1</b><span>SPECIMEN</span></div>
+          <div><b>2</b><span>HABITAT</span></div>
+          <div><b>3</b><span>FOOD WEB</span></div>
+          <div><b>4</b><span>THREATS</span></div>
+          <div><b>5</b><span>YOUR MOVE</span></div>
+        </div>
+
+        <div class="score-bar">
+          <span>CHECKPOINT SCORE</span>
+          <strong><span id="score">0</span> / 5</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="section light station" data-station="1">
+      <div class="wrap two-col reveal">
+        <div>
+          <div class="eyebrow dark-text">STATION 1</div>
+          <h2 class="dark-text">Know your specimen.</h2>
+          <p class="dark-text">Red wolves have long legs, tall pointed ears, and a lean build. Their coat can mix cinnamon red, tan, gray, brown, and black. Adults are about 4 to 5 feet long from nose to tail and usually weigh about 40 to 80 pounds.</p>
+          <p class="dark-text">They are generally smaller than gray wolves but larger and heavier built than coyotes.</p>
+        </div>
+        <div class="photo wolf-photo" aria-label="Red wolf"></div>
+      </div>
+
+      <div class="wrap quiz-card reveal" data-correct="0">
+        <div class="quiz-label">CHECKPOINT 1</div>
+        <h3>Which statement best describes a red wolf?</h3>
+        <div class="answers">
+          <button type="button">A red wolf is usually larger and heavier than a coyote.</button>
+          <button type="button">A red wolf is normally larger than a gray wolf.</button>
+          <button type="button">Every red wolf has a bright red coat.</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section habitat station" data-station="2">
+      <div class="habitat-overlay"></div>
+      <div class="wrap habitat-content reveal">
+        <div class="eyebrow">STATION 2</div>
+        <h2>Enter the habitat.</h2>
+        <p class="lead">Historically, red wolves lived across much of the eastern and south central United States. Today, the only wild population lives in eastern North Carolina.</p>
+        <p>Useful habitat includes forests, wetlands, marshes, and coastal prairie with enough prey, water, cover, and connected space to move.</p>
+      </div>
+
+      <div class="wrap quiz-card glass reveal" data-correct="0">
+        <div class="quiz-label">CHECKPOINT 2</div>
+        <h3>Which area would give red wolves the best chance of surviving?</h3>
+        <div class="answers">
+          <button type="button">A large connected area with forest, wetlands, prey, and room to move.</button>
+          <button type="button">A small fenced patch next to a busy highway.</button>
+          <button type="button">A downtown park where people regularly feed wildlife.</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section brown station" data-station="3">
+      <div class="wrap reveal">
+        <div class="eyebrow">STATION 3</div>
+        <h2>Food web check.</h2>
+        <p class="lead">Red wolves are predators. Their diet includes animals such as white tailed deer, raccoons, rabbits, rodents, and nutria. This puts them high in the food web.</p>
+
+        <div class="food-chain">
+          <div>Plants</div>
+          <span>→</span>
+          <div>Rabbit</div>
+          <span>→</span>
+          <div class="wolf-node">Red Wolf</div>
+        </div>
+      </div>
+
+      <div class="wrap quiz-card dark-card reveal" data-correct="0">
+        <div class="quiz-label">CHECKPOINT 3</div>
+        <h3>If red wolves disappeared from an area, what is a reasonable ecological concern?</h3>
+        <div class="answers">
+          <button type="button">Some prey populations could increase or change their behavior.</button>
+          <button type="button">Plants would immediately stop growing.</button>
+          <button type="button">Nothing else would change because species act independently.</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section paper station" data-station="4">
+      <div class="wrap reveal">
+        <div class="eyebrow dark-text">STATION 4</div>
+        <h2 class="dark-text">What is pushing them toward extinction?</h2>
+
+        <div class="threat-grid">
+          <article>
+            <span>1</span>
+            <h3>Human caused mortality</h3>
+            <p>Gunshots and vehicle strikes can have a major effect on such a small wild population.</p>
+          </article>
+          <article>
+            <span>2</span>
+            <h3>Coyote hybridization</h3>
+            <p>When red wolf numbers are low and breeding partners are lost, pairing with coyotes becomes more likely.</p>
+          </article>
+          <article>
+            <span>3</span>
+            <h3>Habitat change</h3>
+            <p>Development and habitat alteration reduce the connected space wolves need to hunt, den, and find mates.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="wrap quiz-card reveal" data-correct="1">
+        <div class="quiz-label">CHECKPOINT 4</div>
+        <h3>Why can losing one breeding red wolf create more than one problem?</h3>
+        <div class="answers">
+          <button type="button">It only lowers the population by one, so the effect is small.</button>
+          <button type="button">The surviving mate may have fewer red wolf partners available, which can increase hybridization risk.</button>
+          <button type="button">Another red wolf immediately appears and takes its place.</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section red station" data-station="5">
+      <div class="wrap reveal">
+        <div class="eyebrow">STATION 5</div>
+        <h2>Six degrees from you.</h2>
+        <p class="lead">You are driving through eastern North Carolina around dusk. A large canid appears near the road. A simple choice can affect more than one animal.</p>
+
+        <div class="connection-line">
+          <span>Your driving choice</span>
+          <b>→</b>
+          <span>Collision risk</span>
+          <b>→</b>
+          <span>Loss of one wolf</span>
+          <b>→</b>
+          <span>Fewer breeding pairs</span>
+          <b>→</b>
+          <span>Higher extinction risk</span>
+        </div>
+      </div>
+
+      <div class="wrap quiz-card red-card reveal" data-correct="1">
+        <div class="quiz-label">CHECKPOINT 5</div>
+        <h3>You see a collared red wolf from your car. What should you do?</h3>
+        <div class="answers">
+          <button type="button">Follow it slowly so you can get better pictures.</button>
+          <button type="button">Stay back, do not feed it, and give it plenty of space.</button>
+          <button type="button">Leave food nearby so it has an easier time surviving.</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section dark">
+      <div class="wrap reveal">
+        <div class="eyebrow">FINAL MISSION</div>
+        <h2>Save the pack.</h2>
+        <p class="lead">These are real strategies used in red wolf recovery.</p>
+
+        <div class="strategy-grid">
+          <article>
+            <span>1</span>
+            <h3>Managed releases</h3>
+            <p>Carefully selected red wolves from the SAFE population can be released into eastern North Carolina to strengthen the wild population.</p>
+          </article>
+          <article>
+            <span>2</span>
+            <h3>Pup fostering</h3>
+            <p>Very young captive born pups can be placed into wild dens so they are raised by wild red wolf parents.</p>
+          </article>
+          <article>
+            <span>3</span>
+            <h3>Tracking and monitoring</h3>
+            <p>Tracking collars help biologists follow survival, movement, breeding pairs, and threats.</p>
+          </article>
+          <article>
+            <span>4</span>
+            <h3>Protect habitat</h3>
+            <p>Recovery depends on enough connected habitat and fewer preventable human caused deaths.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section final-section" id="final">
+      <div class="wrap reveal">
+        <div class="eyebrow">FINAL PACK SURVIVAL TEST</div>
+        <h2>Five questions. One final score.</h2>
+        <p class="lead">Answer each question once. Your final result combines this test with the five station checkpoints.</p>
+
+        <div class="final-question" data-correct="1">
+          <h3>1. What is the red wolf's scientific name?</h3>
+          <div class="answers">
+            <button type="button"><em>Canis lupus</em></button>
+            <button type="button"><em>Canis rufus</em></button>
+            <button type="button"><em>Vulpes vulpes</em></button>
+          </div>
+          <div class="feedback" aria-live="polite"></div>
+        </div>
+
+        <div class="final-question" data-correct="0">
+          <h3>2. Where does the only wild red wolf population live today?</h3>
+          <div class="answers">
+            <button type="button">Eastern North Carolina</button>
+            <button type="button">Yellowstone National Park</button>
+            <button type="button">Southern California</button>
+          </div>
+          <div class="feedback" aria-live="polite"></div>
+        </div>
+
+        <div class="final-question" data-correct="0">
+          <h3>3. Which is a major threat to red wolf recovery?</h3>
+          <div class="answers">
+            <button type="button">Human caused mortality</button>
+            <button type="button">Too many red wolves competing with each other</button>
+            <button type="button">A total lack of prey across the Southeast</button>
+          </div>
+          <div class="feedback" aria-live="polite"></div>
+        </div>
+
+        <div class="final-question" data-correct="0">
+          <h3>4. Why are red wolves important to their ecosystem?</h3>
+          <div class="answers">
+            <button type="button">They can influence prey populations and behavior.</button>
+            <button type="button">They produce most of the ecosystem's plant energy.</button>
+            <button type="button">They have no effect on other species.</button>
+          </div>
+          <div class="feedback" aria-live="polite"></div>
+        </div>
+
+        <div class="final-question" data-correct="0">
+          <h3>5. Which is a real conservation strategy?</h3>
+          <div class="answers">
+            <button type="button">Pup fostering and carefully managed releases</button>
+            <button type="button">Feeding wild wolves beside roads</button>
+            <button type="button">Removing tracking collars</button>
+          </div>
+          <div class="feedback" aria-live="polite"></div>
+        </div>
+
+        <div class="result-card" id="resultCard" hidden>
+          <div class="result-label">YOUR RESULT</div>
+          <div class="result-score"><span id="totalScore">0</span><small>/ 10</small></div>
+          <h3 id="resultTitle">FIELD TRACKER</h3>
+          <p id="resultText"></p>
+          <button id="restartButton" type="button">RESTART MISSION</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section sources">
+      <div class="wrap reveal">
+        <div class="eyebrow dark-text">FIELD SOURCES</div>
+        <h2 class="dark-text">Where the information came from.</h2>
+
+        <div class="source-links">
+          <a href="https://www.iucnredlist.org/" target="_blank" rel="noreferrer">IUCN Red List</a>
+          <a href="https://www.fws.gov/project/red-wolf-recovery-program" target="_blank" rel="noreferrer">U.S. Fish and Wildlife Service Red Wolf Recovery Program</a>
+          <a href="https://www.fws.gov/species/red-wolf-canis-rufus" target="_blank" rel="noreferrer">U.S. Fish and Wildlife Service Red Wolf Profile</a>
+          <a href="https://nationalzoo.si.edu/animals/red-wolf" target="_blank" rel="noreferrer">Smithsonian's National Zoo</a>
+        </div>
+
+        <p class="source-note">Population estimates can change as wolves are born, released, or die. The population figure used on this site is the U.S. Fish and Wildlife Service estimate from August 2026.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>RED WOLF: A SPECIMEN IN PERIL</span>
+    <a href="#top">Back to top</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
